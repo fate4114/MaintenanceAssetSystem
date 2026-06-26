@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,28 +19,79 @@ namespace MaintenanceAssetSystem
             InitializeComponent();
         }
 
+        private void LoadDashboard()
+        {
+            MySqlConnection conn =
+                new MySqlConnection(DBConnection.connString);
+
+            conn.Open();
+
+            // TOTAL ASSETS
+            MySqlCommand cmd1 =
+                new MySqlCommand("SELECT COUNT(*) FROM Assets", conn);
+
+            Label.Text =
+                cmd1.ExecuteScalar().ToString();
+
+            // PENDING REQUESTS
+            MySqlCommand cmd2 =
+                new MySqlCommand("SELECT COUNT(*) FROM Requests WHERE Status='Pending'", conn);
+
+            lblPendingRequests.Text =
+                cmd2.ExecuteScalar().ToString();
+
+            // COMPLETED
+            MySqlCommand cmd3 =
+                new MySqlCommand("SELECT COUNT(*) FROM Requests WHERE Status='Completed'", conn);
+
+            lblCompletedMaintenance.Text =
+                cmd3.ExecuteScalar().ToString();
+
+            // TECHNICIANS
+            MySqlCommand cmd4 =
+                new MySqlCommand("SELECT COUNT(*) FROM Technicians", conn);
+
+            lblTotalTechnicians.Text =
+                cmd4.ExecuteScalar().ToString();
+
+            conn.Close();
+
+            LoadRecentRequests();
+        }
+
+        private void LoadRecentRequests()
+        {
+            MySqlConnection conn =
+                new MySqlConnection(DBConnection.connString);
+
+            string query = @"
+            SELECT
+                r.Request_ID,
+                a.Asset_Name AS Asset,
+                r.Requested_By,
+                t.Full_Name AS Technician,
+                r.Status,
+                r.Date_Requested
+            FROM Requests r
+            INNER JOIN Assets a
+                ON r.Asset_ID = a.Asset_ID
+            INNER JOIN Technicians t
+                ON r.Technician_ID = t.Technician_ID
+            ORDER BY r.Date_Requested DESC
+            LIMIT 5";
+
+            MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
+
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+
+            dgvDashboard.DataSource = dt;
+        }
+
         private void frmDashboard_Load(object sender, EventArgs e)
         {
-            {
-                MakeCircle(pictureBox1);
-                MakeCircle(pictureBox2);
-            }
-
-            dgvRequests.Rows.Add(
-                "MR-2025-0012",
-                "Dell Laptop",
-                "Francine Manabat",
-                "Jaycel Suarez",
-                "Pending",
-                "May 13, 2025");
-
-            dgvRequests.Rows.Add(
-                "MR-2025-0011",
-                "Projector",
-                "Joshua Garcia",
-                "Marty De Jesus",
-                "Completed",
-                "May 12, 2025");
+            LoadDashboard();
 
         }
 

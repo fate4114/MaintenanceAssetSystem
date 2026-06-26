@@ -44,19 +44,14 @@
             this.lblDashboardTitle = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.pnlAssets = new System.Windows.Forms.Panel();
-            this.lblTotalAssets = new System.Windows.Forms.Label();
+            this.Label = new System.Windows.Forms.Label();
             this.pnlTechnicians = new System.Windows.Forms.Panel();
             this.lblTechniciansValue = new System.Windows.Forms.Label();
             this.pnlCompleted = new System.Windows.Forms.Panel();
             this.lblCompletedValue = new System.Windows.Forms.Label();
             this.pnlPending = new System.Windows.Forms.Panel();
             this.lblPendingValue = new System.Windows.Forms.Label();
-            this.dgvRequests = new System.Windows.Forms.DataGridView();
-            this.colRequestID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAsset = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colRequestedBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTechnician = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDateRequested = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDashboard = new System.Windows.Forms.DataGridView();
             this.RoundPane = new System.Windows.Forms.Panel();
             this.btnViewAll = new System.Windows.Forms.Button();
             this.lblRecentRequests = new System.Windows.Forms.Label();
@@ -64,6 +59,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lblTotalAssets = new System.Windows.Forms.Label();
+            this.lblPendingRequests = new System.Windows.Forms.Label();
+            this.lblCompletedMaintenance = new System.Windows.Forms.Label();
+            this.lblTotalTechnicians = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlSidebar.SuspendLayout();
@@ -71,8 +74,12 @@
             this.pnlTechnicians.SuspendLayout();
             this.pnlCompleted.SuspendLayout();
             this.pnlPending.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRequests)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDashboard)).BeginInit();
             this.RoundPane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -258,26 +265,30 @@
             // 
             // pnlAssets
             // 
-            this.pnlAssets.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlAssets.BackColor = System.Drawing.Color.White;
+            this.pnlAssets.Controls.Add(this.pictureBox3);
             this.pnlAssets.Controls.Add(this.lblTotalAssets);
+            this.pnlAssets.Controls.Add(this.Label);
             this.pnlAssets.Location = new System.Drawing.Point(315, 132);
             this.pnlAssets.Name = "pnlAssets";
             this.pnlAssets.Size = new System.Drawing.Size(358, 233);
             this.pnlAssets.TabIndex = 21;
             // 
-            // lblTotalAssets
+            // Label
             // 
-            this.lblTotalAssets.AutoSize = true;
-            this.lblTotalAssets.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalAssets.Location = new System.Drawing.Point(115, 19);
-            this.lblTotalAssets.Name = "lblTotalAssets";
-            this.lblTotalAssets.Size = new System.Drawing.Size(128, 30);
-            this.lblTotalAssets.TabIndex = 0;
-            this.lblTotalAssets.Text = "Total Assets";
+            this.Label.AutoSize = true;
+            this.Label.Font = new System.Drawing.Font("Segoe UI", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label.Location = new System.Drawing.Point(171, 74);
+            this.Label.Name = "Label";
+            this.Label.Size = new System.Drawing.Size(109, 128);
+            this.Label.TabIndex = 0;
+            this.Label.Text = "0";
             // 
             // pnlTechnicians
             // 
-            this.pnlTechnicians.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlTechnicians.BackColor = System.Drawing.Color.White;
+            this.pnlTechnicians.Controls.Add(this.pictureBox6);
+            this.pnlTechnicians.Controls.Add(this.lblTotalTechnicians);
             this.pnlTechnicians.Controls.Add(this.lblTechniciansValue);
             this.pnlTechnicians.Location = new System.Drawing.Point(1509, 132);
             this.pnlTechnicians.Name = "pnlTechnicians";
@@ -287,16 +298,18 @@
             // lblTechniciansValue
             // 
             this.lblTechniciansValue.AutoSize = true;
-            this.lblTechniciansValue.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTechniciansValue.Location = new System.Drawing.Point(120, 19);
+            this.lblTechniciansValue.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTechniciansValue.Location = new System.Drawing.Point(100, 17);
             this.lblTechniciansValue.Name = "lblTechniciansValue";
-            this.lblTechniciansValue.Size = new System.Drawing.Size(125, 30);
+            this.lblTechniciansValue.Size = new System.Drawing.Size(189, 45);
             this.lblTechniciansValue.TabIndex = 3;
             this.lblTechniciansValue.Text = "Technicians";
             // 
             // pnlCompleted
             // 
-            this.pnlCompleted.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlCompleted.BackColor = System.Drawing.Color.White;
+            this.pnlCompleted.Controls.Add(this.pictureBox5);
+            this.pnlCompleted.Controls.Add(this.lblCompletedMaintenance);
             this.pnlCompleted.Controls.Add(this.lblCompletedValue);
             this.pnlCompleted.Location = new System.Drawing.Point(1111, 132);
             this.pnlCompleted.Name = "pnlCompleted";
@@ -306,16 +319,18 @@
             // lblCompletedValue
             // 
             this.lblCompletedValue.AutoSize = true;
-            this.lblCompletedValue.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompletedValue.Location = new System.Drawing.Point(64, 19);
+            this.lblCompletedValue.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompletedValue.Location = new System.Drawing.Point(23, 25);
             this.lblCompletedValue.Name = "lblCompletedValue";
-            this.lblCompletedValue.Size = new System.Drawing.Size(253, 30);
+            this.lblCompletedValue.Size = new System.Drawing.Size(332, 37);
             this.lblCompletedValue.TabIndex = 2;
             this.lblCompletedValue.Text = "Completed Maintenance";
             // 
             // pnlPending
             // 
-            this.pnlPending.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlPending.BackColor = System.Drawing.Color.White;
+            this.pnlPending.Controls.Add(this.pictureBox4);
+            this.pnlPending.Controls.Add(this.lblPendingRequests);
             this.pnlPending.Controls.Add(this.lblPendingValue);
             this.pnlPending.Location = new System.Drawing.Point(711, 132);
             this.pnlPending.Name = "pnlPending";
@@ -325,77 +340,41 @@
             // lblPendingValue
             // 
             this.lblPendingValue.AutoSize = true;
-            this.lblPendingValue.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPendingValue.Location = new System.Drawing.Point(96, 19);
+            this.lblPendingValue.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPendingValue.Location = new System.Drawing.Point(50, 19);
             this.lblPendingValue.Name = "lblPendingValue";
-            this.lblPendingValue.Size = new System.Drawing.Size(178, 30);
+            this.lblPendingValue.Size = new System.Drawing.Size(271, 45);
             this.lblPendingValue.TabIndex = 1;
             this.lblPendingValue.Text = "Pending Request";
             // 
-            // dgvRequests
+            // dgvDashboard
             // 
-            this.dgvRequests.AllowUserToAddRows = false;
-            this.dgvRequests.AllowUserToResizeRows = false;
-            this.dgvRequests.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvRequests.BackgroundColor = System.Drawing.Color.White;
-            this.dgvRequests.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvRequests.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvRequests.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRequests.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colRequestID,
-            this.colAsset,
-            this.colRequestedBy,
-            this.colTechnician,
-            this.colDateRequested});
-            this.dgvRequests.EnableHeadersVisualStyles = false;
-            this.dgvRequests.GridColor = System.Drawing.Color.Gainsboro;
-            this.dgvRequests.Location = new System.Drawing.Point(25, 53);
-            this.dgvRequests.MultiSelect = false;
-            this.dgvRequests.Name = "dgvRequests";
-            this.dgvRequests.ReadOnly = true;
-            this.dgvRequests.RowHeadersVisible = false;
-            this.dgvRequests.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRequests.Size = new System.Drawing.Size(1524, 546);
-            this.dgvRequests.TabIndex = 20;
-            this.dgvRequests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // colRequestID
-            // 
-            this.colRequestID.HeaderText = "Request ID";
-            this.colRequestID.Name = "colRequestID";
-            this.colRequestID.ReadOnly = true;
-            // 
-            // colAsset
-            // 
-            this.colAsset.HeaderText = "Asset";
-            this.colAsset.Name = "colAsset";
-            this.colAsset.ReadOnly = true;
-            // 
-            // colRequestedBy
-            // 
-            this.colRequestedBy.HeaderText = "Requested By";
-            this.colRequestedBy.Name = "colRequestedBy";
-            this.colRequestedBy.ReadOnly = true;
-            // 
-            // colTechnician
-            // 
-            this.colTechnician.HeaderText = "Status";
-            this.colTechnician.Name = "colTechnician";
-            this.colTechnician.ReadOnly = true;
-            // 
-            // colDateRequested
-            // 
-            this.colDateRequested.HeaderText = "Date Requested";
-            this.colDateRequested.Name = "colDateRequested";
-            this.colDateRequested.ReadOnly = true;
+            this.dgvDashboard.AllowUserToAddRows = false;
+            this.dgvDashboard.AllowUserToResizeRows = false;
+            this.dgvDashboard.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDashboard.BackgroundColor = System.Drawing.Color.White;
+            this.dgvDashboard.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvDashboard.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvDashboard.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvDashboard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDashboard.EnableHeadersVisualStyles = false;
+            this.dgvDashboard.GridColor = System.Drawing.Color.Gainsboro;
+            this.dgvDashboard.Location = new System.Drawing.Point(25, 53);
+            this.dgvDashboard.MultiSelect = false;
+            this.dgvDashboard.Name = "dgvDashboard";
+            this.dgvDashboard.ReadOnly = true;
+            this.dgvDashboard.RowHeadersVisible = false;
+            this.dgvDashboard.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDashboard.Size = new System.Drawing.Size(1524, 546);
+            this.dgvDashboard.TabIndex = 20;
+            this.dgvDashboard.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // RoundPane
             // 
             this.RoundPane.BackColor = System.Drawing.Color.Silver;
             this.RoundPane.Controls.Add(this.btnViewAll);
             this.RoundPane.Controls.Add(this.lblRecentRequests);
-            this.RoundPane.Controls.Add(this.dgvRequests);
+            this.RoundPane.Controls.Add(this.dgvDashboard);
             this.RoundPane.Location = new System.Drawing.Point(290, 376);
             this.RoundPane.Name = "RoundPane";
             this.RoundPane.Size = new System.Drawing.Size(1602, 638);
@@ -409,6 +388,7 @@
             this.btnViewAll.TabIndex = 23;
             this.btnViewAll.Text = "View All";
             this.btnViewAll.UseVisualStyleBackColor = true;
+            this.btnViewAll.Visible = false;
             // 
             // lblRecentRequests
             // 
@@ -451,6 +431,86 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(372, 247);
             this.panel4.TabIndex = 41;
+            // 
+            // lblTotalAssets
+            // 
+            this.lblTotalAssets.AutoSize = true;
+            this.lblTotalAssets.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalAssets.Location = new System.Drawing.Point(87, 19);
+            this.lblTotalAssets.Name = "lblTotalAssets";
+            this.lblTotalAssets.Size = new System.Drawing.Size(183, 45);
+            this.lblTotalAssets.TabIndex = 30;
+            this.lblTotalAssets.Text = "Total Asset";
+            // 
+            // lblPendingRequests
+            // 
+            this.lblPendingRequests.AutoSize = true;
+            this.lblPendingRequests.Font = new System.Drawing.Font("Segoe UI", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPendingRequests.Location = new System.Drawing.Point(175, 76);
+            this.lblPendingRequests.Name = "lblPendingRequests";
+            this.lblPendingRequests.Size = new System.Drawing.Size(109, 128);
+            this.lblPendingRequests.TabIndex = 31;
+            this.lblPendingRequests.Text = "0";
+            // 
+            // lblCompletedMaintenance
+            // 
+            this.lblCompletedMaintenance.AutoSize = true;
+            this.lblCompletedMaintenance.Font = new System.Drawing.Font("Segoe UI", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompletedMaintenance.Location = new System.Drawing.Point(176, 76);
+            this.lblCompletedMaintenance.Name = "lblCompletedMaintenance";
+            this.lblCompletedMaintenance.Size = new System.Drawing.Size(109, 128);
+            this.lblCompletedMaintenance.TabIndex = 32;
+            this.lblCompletedMaintenance.Text = "0";
+            // 
+            // lblTotalTechnicians
+            // 
+            this.lblTotalTechnicians.AutoSize = true;
+            this.lblTotalTechnicians.Font = new System.Drawing.Font("Segoe UI", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalTechnicians.Location = new System.Drawing.Point(180, 66);
+            this.lblTotalTechnicians.Name = "lblTotalTechnicians";
+            this.lblTotalTechnicians.Size = new System.Drawing.Size(109, 128);
+            this.lblTotalTechnicians.TabIndex = 33;
+            this.lblTotalTechnicians.Text = "0";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::MaintenanceAssetSystem.Properties.Resources.Gemini_Generated_Image_6gniv16gniv16gni;
+            this.pictureBox4.Location = new System.Drawing.Point(58, 86);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(131, 108);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 32;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::MaintenanceAssetSystem.Properties.Resources.Gemini_Generated_Image_u3lw70u3lw70u3lw;
+            this.pictureBox5.Location = new System.Drawing.Point(59, 94);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(111, 93);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 33;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::MaintenanceAssetSystem.Properties.Resources.Gemini_Generated_Image_vjfktwvjfktwvjfk;
+            this.pictureBox6.Location = new System.Drawing.Point(63, 90);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(111, 93);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 34;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::MaintenanceAssetSystem.Properties.Resources.Gemini_Generated_Image_72d5b672d5b672d5;
+            this.pictureBox3.Location = new System.Drawing.Point(54, 94);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(111, 89);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 31;
+            this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -506,9 +566,13 @@
             this.pnlCompleted.PerformLayout();
             this.pnlPending.ResumeLayout(false);
             this.pnlPending.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRequests)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDashboard)).EndInit();
             this.RoundPane.ResumeLayout(false);
             this.RoundPane.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -538,16 +602,11 @@
         private System.Windows.Forms.Panel pnlTechnicians;
         private System.Windows.Forms.Panel pnlCompleted;
         private System.Windows.Forms.Panel pnlPending;
-        private System.Windows.Forms.Label lblTotalAssets;
+        private System.Windows.Forms.Label Label;
         private System.Windows.Forms.Label lblTechniciansValue;
         private System.Windows.Forms.Label lblCompletedValue;
         private System.Windows.Forms.Label lblPendingValue;
-        private System.Windows.Forms.DataGridView dgvRequests;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colRequestID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAsset;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colRequestedBy;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTechnician;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDateRequested;
+        private System.Windows.Forms.DataGridView dgvDashboard;
         private System.Windows.Forms.Panel RoundPane;
         private System.Windows.Forms.Button btnViewAll;
         private System.Windows.Forms.Label lblRecentRequests;
@@ -555,5 +614,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label lblTotalAssets;
+        private System.Windows.Forms.Label lblTotalTechnicians;
+        private System.Windows.Forms.Label lblCompletedMaintenance;
+        private System.Windows.Forms.Label lblPendingRequests;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

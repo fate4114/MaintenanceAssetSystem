@@ -32,20 +32,45 @@
             this.dgvAssets = new System.Windows.Forms.DataGridView();
             this.lblAvailableAssetsText = new System.Windows.Forms.Label();
             this.pnlAvailableAssets = new System.Windows.Forms.Panel();
+            this.lblAvailable = new System.Windows.Forms.Label();
             this.lblMaintenanceAssetsText = new System.Windows.Forms.Label();
             this.pnlMaintenanceAssets = new System.Windows.Forms.Panel();
+            this.lblMaintenance = new System.Windows.Forms.Label();
             this.pnlTotalAssets = new System.Windows.Forms.Panel();
+            this.lblTotalAssets = new System.Windows.Forms.Label();
             this.lblDashboardTitle = new System.Windows.Forms.Label();
             this.lblTotalAssetsText = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
             this.pnlAssetTable = new System.Windows.Forms.Panel();
-            this.btnEditAsset = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btnUpdateAsset = new System.Windows.Forms.Button();
+            this.btnAddAsset = new System.Windows.Forms.Button();
+            this.btnRefreshAsset = new System.Windows.Forms.Button();
+            this.cmbAssetStatus = new System.Windows.Forms.ComboBox();
+            this.txtAssetLocation = new System.Windows.Forms.TextBox();
+            this.btnDeleteAsset = new System.Windows.Forms.Button();
+            this.txtAssetCategory = new System.Windows.Forms.TextBox();
+            this.txtAssetName = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtSearchAsset = new System.Windows.Forms.TextBox();
             this.lblSearchAsset = new System.Windows.Forms.Label();
-            this.btnRefreshAsset = new System.Windows.Forms.Button();
-            this.btnDeleteAsset = new System.Windows.Forms.Button();
-            this.btnAddAsset = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnTechnicians = new System.Windows.Forms.Button();
@@ -55,36 +80,30 @@
             this.lblSystemName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pnlSidebar = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAssets = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblAssetsSubtitle = new System.Windows.Forms.Label();
             this.lblAssetsTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblTotalAssets = new System.Windows.Forms.Label();
-            this.lblAvailable = new System.Windows.Forms.Label();
-            this.lblMaintenance = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtAssetName = new System.Windows.Forms.TextBox();
-            this.txtAssetCategory = new System.Windows.Forms.TextBox();
-            this.txtAssetLocation = new System.Windows.Forms.TextBox();
-            this.cmbAssetStatus = new System.Windows.Forms.ComboBox();
-            this.btnUpdateAsset = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAssets)).BeginInit();
             this.pnlAvailableAssets.SuspendLayout();
             this.pnlMaintenanceAssets.SuspendLayout();
             this.pnlTotalAssets.SuspendLayout();
             this.pnlAssetTable.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.pnlSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvAssets
@@ -111,16 +130,17 @@
             // lblAvailableAssetsText
             // 
             this.lblAvailableAssetsText.AutoSize = true;
-            this.lblAvailableAssetsText.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvailableAssetsText.Location = new System.Drawing.Point(125, 19);
+            this.lblAvailableAssetsText.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
+            this.lblAvailableAssetsText.Location = new System.Drawing.Point(109, 19);
             this.lblAvailableAssetsText.Name = "lblAvailableAssetsText";
-            this.lblAvailableAssetsText.Size = new System.Drawing.Size(134, 40);
+            this.lblAvailableAssetsText.Size = new System.Drawing.Size(157, 45);
             this.lblAvailableAssetsText.TabIndex = 1;
-            this.lblAvailableAssetsText.Text = "Avalable";
+            this.lblAvailableAssetsText.Text = "Available";
             // 
             // pnlAvailableAssets
             // 
-            this.pnlAvailableAssets.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlAvailableAssets.BackColor = System.Drawing.Color.White;
+            this.pnlAvailableAssets.Controls.Add(this.pictureBox4);
             this.pnlAvailableAssets.Controls.Add(this.lblAvailable);
             this.pnlAvailableAssets.Controls.Add(this.lblAvailableAssetsText);
             this.pnlAvailableAssets.Location = new System.Drawing.Point(905, 124);
@@ -128,19 +148,30 @@
             this.pnlAvailableAssets.Size = new System.Drawing.Size(358, 233);
             this.pnlAvailableAssets.TabIndex = 32;
             // 
+            // lblAvailable
+            // 
+            this.lblAvailable.AutoSize = true;
+            this.lblAvailable.Font = new System.Drawing.Font("Segoe UI", 72F, System.Drawing.FontStyle.Bold);
+            this.lblAvailable.Location = new System.Drawing.Point(162, 79);
+            this.lblAvailable.Name = "lblAvailable";
+            this.lblAvailable.Size = new System.Drawing.Size(109, 128);
+            this.lblAvailable.TabIndex = 29;
+            this.lblAvailable.Text = "0";
+            // 
             // lblMaintenanceAssetsText
             // 
             this.lblMaintenanceAssetsText.AutoSize = true;
-            this.lblMaintenanceAssetsText.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaintenanceAssetsText.Location = new System.Drawing.Point(44, 19);
+            this.lblMaintenanceAssetsText.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
+            this.lblMaintenanceAssetsText.Location = new System.Drawing.Point(32, 19);
             this.lblMaintenanceAssetsText.Name = "lblMaintenanceAssetsText";
-            this.lblMaintenanceAssetsText.Size = new System.Drawing.Size(289, 40);
+            this.lblMaintenanceAssetsText.Size = new System.Drawing.Size(313, 45);
             this.lblMaintenanceAssetsText.TabIndex = 2;
             this.lblMaintenanceAssetsText.Text = "Under Maintenance";
             // 
             // pnlMaintenanceAssets
             // 
-            this.pnlMaintenanceAssets.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlMaintenanceAssets.BackColor = System.Drawing.Color.White;
+            this.pnlMaintenanceAssets.Controls.Add(this.pictureBox5);
             this.pnlMaintenanceAssets.Controls.Add(this.lblMaintenance);
             this.pnlMaintenanceAssets.Controls.Add(this.lblMaintenanceAssetsText);
             this.pnlMaintenanceAssets.Location = new System.Drawing.Point(1300, 124);
@@ -148,9 +179,20 @@
             this.pnlMaintenanceAssets.Size = new System.Drawing.Size(358, 233);
             this.pnlMaintenanceAssets.TabIndex = 31;
             // 
+            // lblMaintenance
+            // 
+            this.lblMaintenance.AutoSize = true;
+            this.lblMaintenance.Font = new System.Drawing.Font("Segoe UI", 72F, System.Drawing.FontStyle.Bold);
+            this.lblMaintenance.Location = new System.Drawing.Point(163, 74);
+            this.lblMaintenance.Name = "lblMaintenance";
+            this.lblMaintenance.Size = new System.Drawing.Size(109, 128);
+            this.lblMaintenance.TabIndex = 30;
+            this.lblMaintenance.Text = "0";
+            // 
             // pnlTotalAssets
             // 
-            this.pnlTotalAssets.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlTotalAssets.BackColor = System.Drawing.Color.White;
+            this.pnlTotalAssets.Controls.Add(this.pictureBox3);
             this.pnlTotalAssets.Controls.Add(this.lblTotalAssets);
             this.pnlTotalAssets.Controls.Add(this.lblDashboardTitle);
             this.pnlTotalAssets.Controls.Add(this.lblTotalAssetsText);
@@ -158,6 +200,16 @@
             this.pnlTotalAssets.Name = "pnlTotalAssets";
             this.pnlTotalAssets.Size = new System.Drawing.Size(358, 233);
             this.pnlTotalAssets.TabIndex = 29;
+            // 
+            // lblTotalAssets
+            // 
+            this.lblTotalAssets.AutoSize = true;
+            this.lblTotalAssets.Font = new System.Drawing.Font("Segoe UI", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalAssets.Location = new System.Drawing.Point(160, 74);
+            this.lblTotalAssets.Name = "lblTotalAssets";
+            this.lblTotalAssets.Size = new System.Drawing.Size(109, 128);
+            this.lblTotalAssets.TabIndex = 28;
+            this.lblTotalAssets.Text = "0";
             // 
             // lblDashboardTitle
             // 
@@ -172,10 +224,10 @@
             // lblTotalAssetsText
             // 
             this.lblTotalAssetsText.AutoSize = true;
-            this.lblTotalAssetsText.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalAssetsText.Location = new System.Drawing.Point(102, 19);
+            this.lblTotalAssetsText.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalAssetsText.Location = new System.Drawing.Point(81, 19);
             this.lblTotalAssetsText.Name = "lblTotalAssetsText";
-            this.lblTotalAssetsText.Size = new System.Drawing.Size(178, 40);
+            this.lblTotalAssetsText.Size = new System.Drawing.Size(197, 45);
             this.lblTotalAssetsText.TabIndex = 0;
             this.lblTotalAssetsText.Text = "Total Assets";
             // 
@@ -213,15 +265,304 @@
             this.pnlAssetTable.Size = new System.Drawing.Size(1613, 638);
             this.pnlAssetTable.TabIndex = 33;
             // 
-            // btnEditAsset
+            // groupBox1
             // 
-            this.btnEditAsset.Location = new System.Drawing.Point(354, 140);
-            this.btnEditAsset.Name = "btnEditAsset";
-            this.btnEditAsset.Size = new System.Drawing.Size(142, 44);
-            this.btnEditAsset.TabIndex = 30;
-            this.btnEditAsset.Text = "Edit";
-            this.btnEditAsset.UseVisualStyleBackColor = true;
-            this.btnEditAsset.Click += new System.EventHandler(this.btnEditAsset_Click);
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Controls.Add(this.btnUpdateAsset);
+            this.groupBox1.Controls.Add(this.btnAddAsset);
+            this.groupBox1.Controls.Add(this.btnRefreshAsset);
+            this.groupBox1.Controls.Add(this.cmbAssetStatus);
+            this.groupBox1.Controls.Add(this.txtAssetLocation);
+            this.groupBox1.Controls.Add(this.btnDeleteAsset);
+            this.groupBox1.Controls.Add(this.txtAssetCategory);
+            this.groupBox1.Controls.Add(this.txtAssetName);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Location = new System.Drawing.Point(16, 53);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(538, 546);
+            this.groupBox1.TabIndex = 31;
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.button4);
+            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Location = new System.Drawing.Point(0, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(538, 546);
+            this.groupBox2.TabIndex = 31;
+            this.groupBox2.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(354, 101);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(142, 44);
+            this.button1.TabIndex = 39;
+            this.button1.Text = "Update";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnUpdateAsset_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Navy;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(354, 24);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(142, 53);
+            this.button2.TabIndex = 24;
+            this.button2.Text = "Add Assets";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.btnAddAsset_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(354, 245);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(142, 44);
+            this.button3.TabIndex = 27;
+            this.button3.Text = "Referesh";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.btnRefreshAsset_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Available",
+            "",
+            "In Use",
+            "",
+            "Under Maintenance",
+            "",
+            "Disposed"});
+            this.comboBox1.Location = new System.Drawing.Point(103, 305);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(211, 21);
+            this.comboBox1.TabIndex = 38;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(103, 221);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(211, 29);
+            this.textBox1.TabIndex = 37;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Red;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(354, 173);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(142, 54);
+            this.button4.TabIndex = 26;
+            this.button4.Text = "Delete";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.btnDeleteAsset_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(103, 134);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(211, 29);
+            this.textBox2.TabIndex = 36;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(103, 48);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(211, 29);
+            this.textBox3.TabIndex = 35;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.GhostWhite;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(6, 293);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(50, 16);
+            this.label9.TabIndex = 34;
+            this.label9.Text = "Status";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.GhostWhite;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(6, 222);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(66, 16);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "Location";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.GhostWhite;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(6, 135);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(70, 16);
+            this.label11.TabIndex = 32;
+            this.label11.Text = "Category";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.GhostWhite;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(6, 61);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(91, 16);
+            this.label12.TabIndex = 31;
+            this.label12.Text = "Asset Name";
+            // 
+            // btnUpdateAsset
+            // 
+            this.btnUpdateAsset.Location = new System.Drawing.Point(354, 87);
+            this.btnUpdateAsset.Name = "btnUpdateAsset";
+            this.btnUpdateAsset.Size = new System.Drawing.Size(142, 44);
+            this.btnUpdateAsset.TabIndex = 39;
+            this.btnUpdateAsset.Text = "Update";
+            this.btnUpdateAsset.UseVisualStyleBackColor = true;
+            this.btnUpdateAsset.Click += new System.EventHandler(this.btnUpdateAsset_Click);
+            // 
+            // btnAddAsset
+            // 
+            this.btnAddAsset.BackColor = System.Drawing.Color.Navy;
+            this.btnAddAsset.ForeColor = System.Drawing.Color.White;
+            this.btnAddAsset.Location = new System.Drawing.Point(354, 24);
+            this.btnAddAsset.Name = "btnAddAsset";
+            this.btnAddAsset.Size = new System.Drawing.Size(142, 53);
+            this.btnAddAsset.TabIndex = 24;
+            this.btnAddAsset.Text = "Add Assets";
+            this.btnAddAsset.UseVisualStyleBackColor = false;
+            this.btnAddAsset.Click += new System.EventHandler(this.btnAddAsset_Click);
+            // 
+            // btnRefreshAsset
+            // 
+            this.btnRefreshAsset.Location = new System.Drawing.Point(354, 195);
+            this.btnRefreshAsset.Name = "btnRefreshAsset";
+            this.btnRefreshAsset.Size = new System.Drawing.Size(142, 44);
+            this.btnRefreshAsset.TabIndex = 27;
+            this.btnRefreshAsset.Text = "Referesh";
+            this.btnRefreshAsset.UseVisualStyleBackColor = true;
+            this.btnRefreshAsset.Click += new System.EventHandler(this.btnRefreshAsset_Click);
+            // 
+            // cmbAssetStatus
+            // 
+            this.cmbAssetStatus.FormattingEnabled = true;
+            this.cmbAssetStatus.Items.AddRange(new object[] {
+            "Available",
+            "",
+            "In Use",
+            "",
+            "Under Maintenance",
+            "",
+            "Disposed"});
+            this.cmbAssetStatus.Location = new System.Drawing.Point(103, 206);
+            this.cmbAssetStatus.Name = "cmbAssetStatus";
+            this.cmbAssetStatus.Size = new System.Drawing.Size(211, 21);
+            this.cmbAssetStatus.TabIndex = 38;
+            // 
+            // txtAssetLocation
+            // 
+            this.txtAssetLocation.Location = new System.Drawing.Point(103, 141);
+            this.txtAssetLocation.Multiline = true;
+            this.txtAssetLocation.Name = "txtAssetLocation";
+            this.txtAssetLocation.Size = new System.Drawing.Size(211, 29);
+            this.txtAssetLocation.TabIndex = 37;
+            // 
+            // btnDeleteAsset
+            // 
+            this.btnDeleteAsset.BackColor = System.Drawing.Color.Red;
+            this.btnDeleteAsset.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteAsset.Location = new System.Drawing.Point(354, 135);
+            this.btnDeleteAsset.Name = "btnDeleteAsset";
+            this.btnDeleteAsset.Size = new System.Drawing.Size(142, 54);
+            this.btnDeleteAsset.TabIndex = 26;
+            this.btnDeleteAsset.Text = "Delete";
+            this.btnDeleteAsset.UseVisualStyleBackColor = false;
+            this.btnDeleteAsset.Click += new System.EventHandler(this.btnDeleteAsset_Click);
+            // 
+            // txtAssetCategory
+            // 
+            this.txtAssetCategory.Location = new System.Drawing.Point(103, 88);
+            this.txtAssetCategory.Multiline = true;
+            this.txtAssetCategory.Name = "txtAssetCategory";
+            this.txtAssetCategory.Size = new System.Drawing.Size(211, 29);
+            this.txtAssetCategory.TabIndex = 36;
+            // 
+            // txtAssetName
+            // 
+            this.txtAssetName.Location = new System.Drawing.Point(103, 29);
+            this.txtAssetName.Multiline = true;
+            this.txtAssetName.Name = "txtAssetName";
+            this.txtAssetName.Size = new System.Drawing.Size(211, 29);
+            this.txtAssetName.TabIndex = 35;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.GhostWhite;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(6, 206);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(50, 16);
+            this.label8.TabIndex = 34;
+            this.label8.Text = "Status";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.GhostWhite;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(6, 154);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(66, 16);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Location";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.GhostWhite;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(6, 101);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 16);
+            this.label6.TabIndex = 32;
+            this.label6.Text = "Category";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.GhostWhite;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 42);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(91, 16);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "Asset Name";
             // 
             // txtSearchAsset
             // 
@@ -243,40 +584,6 @@
             this.lblSearchAsset.Size = new System.Drawing.Size(71, 25);
             this.lblSearchAsset.TabIndex = 28;
             this.lblSearchAsset.Text = "Search";
-            // 
-            // btnRefreshAsset
-            // 
-            this.btnRefreshAsset.Location = new System.Drawing.Point(354, 250);
-            this.btnRefreshAsset.Name = "btnRefreshAsset";
-            this.btnRefreshAsset.Size = new System.Drawing.Size(142, 44);
-            this.btnRefreshAsset.TabIndex = 27;
-            this.btnRefreshAsset.Text = "Referesh";
-            this.btnRefreshAsset.UseVisualStyleBackColor = true;
-            this.btnRefreshAsset.Click += new System.EventHandler(this.btnRefreshAsset_Click);
-            // 
-            // btnDeleteAsset
-            // 
-            this.btnDeleteAsset.BackColor = System.Drawing.Color.Red;
-            this.btnDeleteAsset.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteAsset.Location = new System.Drawing.Point(354, 190);
-            this.btnDeleteAsset.Name = "btnDeleteAsset";
-            this.btnDeleteAsset.Size = new System.Drawing.Size(142, 54);
-            this.btnDeleteAsset.TabIndex = 26;
-            this.btnDeleteAsset.Text = "Delete";
-            this.btnDeleteAsset.UseVisualStyleBackColor = false;
-            this.btnDeleteAsset.Click += new System.EventHandler(this.btnDeleteAsset_Click);
-            // 
-            // btnAddAsset
-            // 
-            this.btnAddAsset.BackColor = System.Drawing.Color.Navy;
-            this.btnAddAsset.ForeColor = System.Drawing.Color.White;
-            this.btnAddAsset.Location = new System.Drawing.Point(354, 24);
-            this.btnAddAsset.Name = "btnAddAsset";
-            this.btnAddAsset.Size = new System.Drawing.Size(142, 53);
-            this.btnAddAsset.TabIndex = 24;
-            this.btnAddAsset.Text = "Add Assets";
-            this.btnAddAsset.UseVisualStyleBackColor = false;
-            this.btnAddAsset.Click += new System.EventHandler(this.btnAddAsset_Click);
             // 
             // btnLogout
             // 
@@ -398,17 +705,6 @@
             this.pnlSidebar.Size = new System.Drawing.Size(272, 1026);
             this.pnlSidebar.TabIndex = 26;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::MaintenanceAssetSystem.Properties.Resources.download__14_;
-            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 892);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(49, 40);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
-            // 
             // btnAssets
             // 
             this.btnAssets.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -423,17 +719,6 @@
             this.btnAssets.Text = "Assets";
             this.btnAssets.UseVisualStyleBackColor = false;
             this.btnAssets.Click += new System.EventHandler(this.btnAssets_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::MaintenanceAssetSystem.Properties.Resources.Screenshot_2026_06_20_023846;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(38, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(193, 117);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // lblAssetsSubtitle
             // 
@@ -482,151 +767,57 @@
             this.panel3.Size = new System.Drawing.Size(378, 258);
             this.panel3.TabIndex = 38;
             // 
-            // lblTotalAssets
+            // pictureBox2
             // 
-            this.lblTotalAssets.AutoSize = true;
-            this.lblTotalAssets.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalAssets.Location = new System.Drawing.Point(165, 74);
-            this.lblTotalAssets.Name = "lblTotalAssets";
-            this.lblTotalAssets.Size = new System.Drawing.Size(38, 45);
-            this.lblTotalAssets.TabIndex = 28;
-            this.lblTotalAssets.Text = "0";
+            this.pictureBox2.Image = global::MaintenanceAssetSystem.Properties.Resources.download__14_;
+            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(12, 892);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(49, 40);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
             // 
-            // lblAvailable
+            // pictureBox1
             // 
-            this.lblAvailable.AutoSize = true;
-            this.lblAvailable.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvailable.Location = new System.Drawing.Point(162, 79);
-            this.lblAvailable.Name = "lblAvailable";
-            this.lblAvailable.Size = new System.Drawing.Size(38, 45);
-            this.lblAvailable.TabIndex = 29;
-            this.lblAvailable.Text = "0";
+            this.pictureBox1.Image = global::MaintenanceAssetSystem.Properties.Resources.Screenshot_2026_06_20_023846;
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(38, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(193, 117);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
-            // lblMaintenance
+            // pictureBox4
             // 
-            this.lblMaintenance.AutoSize = true;
-            this.lblMaintenance.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaintenance.Location = new System.Drawing.Point(163, 74);
-            this.lblMaintenance.Name = "lblMaintenance";
-            this.lblMaintenance.Size = new System.Drawing.Size(38, 45);
-            this.lblMaintenance.TabIndex = 30;
-            this.lblMaintenance.Text = "0";
+            this.pictureBox4.Image = global::MaintenanceAssetSystem.Properties.Resources.Screenshot_2026_06_26_220801;
+            this.pictureBox4.Location = new System.Drawing.Point(60, 85);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(127, 103);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 33;
+            this.pictureBox4.TabStop = false;
             // 
-            // groupBox1
+            // pictureBox5
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.btnUpdateAsset);
-            this.groupBox1.Controls.Add(this.btnAddAsset);
-            this.groupBox1.Controls.Add(this.btnRefreshAsset);
-            this.groupBox1.Controls.Add(this.cmbAssetStatus);
-            this.groupBox1.Controls.Add(this.btnEditAsset);
-            this.groupBox1.Controls.Add(this.txtAssetLocation);
-            this.groupBox1.Controls.Add(this.btnDeleteAsset);
-            this.groupBox1.Controls.Add(this.txtAssetCategory);
-            this.groupBox1.Controls.Add(this.txtAssetName);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Location = new System.Drawing.Point(16, 53);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(538, 325);
-            this.groupBox1.TabIndex = 31;
-            this.groupBox1.TabStop = false;
+            this.pictureBox5.Image = global::MaintenanceAssetSystem.Properties.Resources.Gemini_Generated_Image_svuo4lsvuo4lsvuo;
+            this.pictureBox5.Location = new System.Drawing.Point(60, 85);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(124, 103);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 33;
+            this.pictureBox5.TabStop = false;
             // 
-            // label5
+            // pictureBox3
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.GhostWhite;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 42);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 16);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Asset Name";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.GhostWhite;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 101);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 16);
-            this.label6.TabIndex = 32;
-            this.label6.Text = "Category";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.GhostWhite;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 154);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 16);
-            this.label7.TabIndex = 33;
-            this.label7.Text = "Location";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.GhostWhite;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(6, 206);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 16);
-            this.label8.TabIndex = 34;
-            this.label8.Text = "Status";
-            // 
-            // txtAssetName
-            // 
-            this.txtAssetName.Location = new System.Drawing.Point(103, 29);
-            this.txtAssetName.Multiline = true;
-            this.txtAssetName.Name = "txtAssetName";
-            this.txtAssetName.Size = new System.Drawing.Size(211, 29);
-            this.txtAssetName.TabIndex = 35;
-            // 
-            // txtAssetCategory
-            // 
-            this.txtAssetCategory.Location = new System.Drawing.Point(103, 88);
-            this.txtAssetCategory.Multiline = true;
-            this.txtAssetCategory.Name = "txtAssetCategory";
-            this.txtAssetCategory.Size = new System.Drawing.Size(211, 29);
-            this.txtAssetCategory.TabIndex = 36;
-            // 
-            // txtAssetLocation
-            // 
-            this.txtAssetLocation.Location = new System.Drawing.Point(103, 141);
-            this.txtAssetLocation.Multiline = true;
-            this.txtAssetLocation.Name = "txtAssetLocation";
-            this.txtAssetLocation.Size = new System.Drawing.Size(211, 29);
-            this.txtAssetLocation.TabIndex = 37;
-            // 
-            // cmbAssetStatus
-            // 
-            this.cmbAssetStatus.FormattingEnabled = true;
-            this.cmbAssetStatus.Items.AddRange(new object[] {
-            "Available",
-            "",
-            "In Use",
-            "",
-            "Under Maintenance",
-            "",
-            "Disposed"});
-            this.cmbAssetStatus.Location = new System.Drawing.Point(103, 206);
-            this.cmbAssetStatus.Name = "cmbAssetStatus";
-            this.cmbAssetStatus.Size = new System.Drawing.Size(211, 21);
-            this.cmbAssetStatus.TabIndex = 38;
-            // 
-            // btnUpdateAsset
-            // 
-            this.btnUpdateAsset.Location = new System.Drawing.Point(354, 87);
-            this.btnUpdateAsset.Name = "btnUpdateAsset";
-            this.btnUpdateAsset.Size = new System.Drawing.Size(142, 44);
-            this.btnUpdateAsset.TabIndex = 39;
-            this.btnUpdateAsset.Text = "Update";
-            this.btnUpdateAsset.UseVisualStyleBackColor = true;
-            this.btnUpdateAsset.Click += new System.EventHandler(this.btnUpdateAsset_Click);
+            this.pictureBox3.Image = global::MaintenanceAssetSystem.Properties.Resources.Gemini_Generated_Image_72d5b672d5b672d5;
+            this.pictureBox3.Location = new System.Drawing.Point(59, 99);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(111, 89);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 32;
+            this.pictureBox3.TabStop = false;
             // 
             // frmAssets
             // 
@@ -657,12 +848,17 @@
             this.pnlTotalAssets.PerformLayout();
             this.pnlAssetTable.ResumeLayout(false);
             this.pnlAssetTable.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.pnlSidebar.ResumeLayout(false);
             this.pnlSidebar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -703,7 +899,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnEditAsset;
         private System.Windows.Forms.Label lblTotalAssets;
         private System.Windows.Forms.Label lblAvailable;
         private System.Windows.Forms.Label lblMaintenance;
@@ -717,5 +912,21 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnUpdateAsset;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

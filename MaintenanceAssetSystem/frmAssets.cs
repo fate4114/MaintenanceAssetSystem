@@ -136,11 +136,11 @@ namespace MaintenanceAssetSystem
 
                 cmd.ExecuteNonQuery();
 
-                conn.Close();
+                
 
                 MessageBox.Show("Saved Successfully!");
 
-                this.Close();
+               
             }
             catch (Exception ex)
             {
@@ -258,11 +258,9 @@ namespace MaintenanceAssetSystem
             {
                 frmAssets frm = new frmAssets();
 
-                // PASS ID (important for UPDATE)
                 frm.AssetID = Convert.ToInt32(
                     dgvAssets.SelectedRows[0].Cells["Asset_ID"].Value);
 
-                // FILL FORM DATA
                 frm.txtAssetName.Text =
                     dgvAssets.SelectedRows[0].Cells["Asset_Name"].Value.ToString();
 
@@ -277,11 +275,11 @@ namespace MaintenanceAssetSystem
 
                 frm.ShowDialog();
 
-                LoadAssets(); // refresh after update
+                LoadAssets();
             }
             else
             {
-                MessageBox.Show("Pumili ka muna ng asset sa table.");
+                MessageBox.Show("Please select an asset first.");
             }
         }
     }
