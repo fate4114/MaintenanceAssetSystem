@@ -67,7 +67,16 @@ namespace MaintenanceAssetSystem
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show(
+              "Are you sure you want to logout?",
+              "Logout",
+              MessageBoxButtons.YesNo,
+              MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void pnlSidebar_Paint(object sender, PaintEventArgs e)
@@ -97,6 +106,13 @@ namespace MaintenanceAssetSystem
         private void btnRequests_Click(object sender, EventArgs e)
         {
             frmRequest dash = new frmRequest();
+            dash.Show();
+            this.Hide(); // or this.Close();
+        }
+
+        private void btnTechnicians_Click(object sender, EventArgs e)
+        {
+            frmTechnician dash = new frmTechnician();
             dash.Show();
             this.Hide(); // or this.Close();
         }

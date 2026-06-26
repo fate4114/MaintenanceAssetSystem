@@ -44,7 +44,7 @@
             this.lblDashboardTitle = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.pnlAssets = new System.Windows.Forms.Panel();
-            this.lblAssetsTitle = new System.Windows.Forms.Label();
+            this.lblTotalAssets = new System.Windows.Forms.Label();
             this.pnlTechnicians = new System.Windows.Forms.Panel();
             this.lblTechniciansValue = new System.Windows.Forms.Label();
             this.pnlCompleted = new System.Windows.Forms.Panel();
@@ -60,6 +60,10 @@
             this.RoundPane = new System.Windows.Forms.Panel();
             this.btnViewAll = new System.Windows.Forms.Button();
             this.lblRecentRequests = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlSidebar.SuspendLayout();
@@ -129,6 +133,7 @@
             this.btnTechnicians.TabIndex = 12;
             this.btnTechnicians.Text = "Technicians";
             this.btnTechnicians.UseVisualStyleBackColor = true;
+            this.btnTechnicians.Click += new System.EventHandler(this.btnTechnicians_Click);
             // 
             // btnRequests
             // 
@@ -254,21 +259,21 @@
             // pnlAssets
             // 
             this.pnlAssets.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlAssets.Controls.Add(this.lblAssetsTitle);
+            this.pnlAssets.Controls.Add(this.lblTotalAssets);
             this.pnlAssets.Location = new System.Drawing.Point(315, 132);
             this.pnlAssets.Name = "pnlAssets";
             this.pnlAssets.Size = new System.Drawing.Size(358, 233);
             this.pnlAssets.TabIndex = 21;
             // 
-            // lblAssetsTitle
+            // lblTotalAssets
             // 
-            this.lblAssetsTitle.AutoSize = true;
-            this.lblAssetsTitle.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAssetsTitle.Location = new System.Drawing.Point(115, 19);
-            this.lblAssetsTitle.Name = "lblAssetsTitle";
-            this.lblAssetsTitle.Size = new System.Drawing.Size(128, 30);
-            this.lblAssetsTitle.TabIndex = 0;
-            this.lblAssetsTitle.Text = "Total Assets";
+            this.lblTotalAssets.AutoSize = true;
+            this.lblTotalAssets.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalAssets.Location = new System.Drawing.Point(115, 19);
+            this.lblTotalAssets.Name = "lblTotalAssets";
+            this.lblTotalAssets.Size = new System.Drawing.Size(128, 30);
+            this.lblTotalAssets.TabIndex = 0;
+            this.lblTotalAssets.Text = "Total Assets";
             // 
             // pnlTechnicians
             // 
@@ -415,6 +420,38 @@
             this.lblRecentRequests.TabIndex = 22;
             this.lblRecentRequests.Text = "Recent Maintenance Request";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Navy;
+            this.panel2.Location = new System.Drawing.Point(701, 123);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(376, 247);
+            this.panel2.TabIndex = 38;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.Location = new System.Drawing.Point(309, 123);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(373, 247);
+            this.panel1.TabIndex = 39;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Navy;
+            this.panel3.Location = new System.Drawing.Point(1102, 123);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(375, 247);
+            this.panel3.TabIndex = 40;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Navy;
+            this.panel4.Location = new System.Drawing.Point(1502, 123);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(372, 247);
+            this.panel4.TabIndex = 41;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::MaintenanceAssetSystem.Properties.Resources.download__14_;
@@ -451,6 +488,10 @@
             this.Controls.Add(this.lblDashboardTitle);
             this.Controls.Add(this.pnlSidebar);
             this.Controls.Add(this.RoundPane);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel4);
             this.Name = "frmDashboard";
             this.Text = "Dashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -497,7 +538,7 @@
         private System.Windows.Forms.Panel pnlTechnicians;
         private System.Windows.Forms.Panel pnlCompleted;
         private System.Windows.Forms.Panel pnlPending;
-        private System.Windows.Forms.Label lblAssetsTitle;
+        private System.Windows.Forms.Label lblTotalAssets;
         private System.Windows.Forms.Label lblTechniciansValue;
         private System.Windows.Forms.Label lblCompletedValue;
         private System.Windows.Forms.Label lblPendingValue;
@@ -510,5 +551,9 @@
         private System.Windows.Forms.Panel RoundPane;
         private System.Windows.Forms.Button btnViewAll;
         private System.Windows.Forms.Label lblRecentRequests;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
     }
 }

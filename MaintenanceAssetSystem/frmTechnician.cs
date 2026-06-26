@@ -10,11 +10,25 @@ using System.Windows.Forms;
 
 namespace MaintenanceAssetSystem
 {
-    public partial class frmRequest : Form
+    public partial class frmTechnician : Form
     {
-        public frmRequest()
+        public frmTechnician()
         {
             InitializeComponent();
+        }
+
+        private void btnAssets_Click(object sender, EventArgs e)
+        {
+            frmAssets dash = new frmAssets();
+            dash.Show();
+            this.Hide(); // or this.Close();
+        }
+
+        private void btnRequests_Click(object sender, EventArgs e)
+        {
+            frmRequest dash = new frmRequest();
+            dash.Show();
+            this.Hide(); // or this.Close();
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -37,29 +51,5 @@ namespace MaintenanceAssetSystem
                 Application.Exit();
             }
         }
-
-        private void btnAssets_Click(object sender, EventArgs e)
-        {
-            frmAssets dash = new frmAssets();
-            dash.Show();
-            this.Hide(); // or this.Close();
-        }
-
-        private void RoundPane_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnRequests_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnTechnicians_Click(object sender, EventArgs e)
-        {
-            frmTechnician dash = new frmTechnician();
-            dash.Show();
-            this.Hide(); // or this.Close();
-        }
     }
-}
+    }
